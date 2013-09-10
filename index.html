@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="A lightning talk by @olizilla for LNUG on the wonders of NodeBots">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bluffers Guide To Nodebots</title>
+    <link rel="stylesheet" href="lib/normalize.v2.1.css">
+    <link rel="stylesheet" href="lib/stack.v0.css">
+    <link rel="stylesheet" href="bluffers-guide-to-nodebots.css">
+    <script src="lib/d3.v3.js"></script>
+    <script src="lib/stack.v0.js"></script>
+</head>
+<body>
+    <section>
+        <h1><b>Bluffers Guide To Nodebots</b></h1>
+        <p></p>
+        <p class="grey">By <a href="https://twitter.com/olizilla">@olizilla</a></p>
+    </section>
+
+    <section style="background:url(https://raw.github.com/rwaldron/johnny-five/master/assets/sgier-johnny-five.png) no-repeat; background-size:cover">
+        <h1>NodeBots are robots powered by JS</h1>
+    </section>
+
+    <section style="background:url(img/nodebot.jpg) no-repeat; background-size:cover">
+        <div class="hi-viz">
+        <p>See:</p>
+        <ul>
+            <li><a href="https://github.com/rwaldron/johnny-five">johnny-five</a> - The jQuery of robotics</li>
+            <li><a href="https://github.com/voodootikigod/node-serialport">node-serialport</a> - Rx/Tx your brains out</li>
+        </ul>
+        </div>
+    </section>
+
+    <section style="background:url(img/nodecopter.jpg) no-repeat; background-size:cover">
+        <h1>NodeCopters are flight capable NodeBots</h1>
+    </section>
+            
+    <section style="background:url(img/crazyflie.jpg) no-repeat; background-size:cover">
+        <div class="hi-viz">
+        <p>See:</p>
+        <ul>
+            <li><a href="https://github.com/felixge/node-ar-drone">ar-drone</a> - Parrot AR Drone client</li>
+            <li><a href="https://github.com/ceejbot/aerogel">aerogel</a> - Crazyflie nanocopter client</li>
+        </ul>   
+        </div>
+    </section>
+
+    <section style="background:url(img/johnny-5-is-meta.jpg) no-repeat; background-size:cover">
+        <h1 style="color:#f3df49">Most NodeBots are johnny-five</h1>
+    </section>
+
+    <section style="text-align:center">
+        <h1 style="margin:-20px 0 0"><span class="js">johnny-five</span> let's Node talk JS to Arduino via Firmata</h1>
+        <img src="img/node-arduino.png">
+    </section>
+
+    <section style="background:url(img/arduino.jpg) no-repeat; background-size:cover">
+        <div class="hi-viz">
+        <h2>
+            Arduino is a usb device <br/> &amp; IDE app for <blink>blinking LEDs</blink>*</h2>
+        <p>*Other components are available</p>          
+        </div>
+    </section>
+
+    <section style="text-align:center; background:url(img/Arduino-IDE.jpg) no-repeat; background-size:cover">
+        <div class="hi-viz">
+        <h2 style="margin:0">The IDE uploads programs for blinking LEDs to the Ardunio</h2>
+        <video controls="false" autoplay="autoplay" loop="loop" muted="muted">
+            <source src="http://dl.dropbox.com/u/3531958/led-strobe.mp4">
+            <source src="http://dl.dropbox.com/u/3531958/led-strobe.ogv">
+            <source src="http://dl.dropbox.com/u/3531958/led-strobe.webm">
+        </video>
+        </div>
+    </section>
+
+    <section style="text-align:center; background:url(img/Arduino-IDE.jpg) no-repeat; background-size:cover">
+        <h2 style="margin:0;color:#222">The IDE is the love-child of <br>
+            Processing (Java) <br>&amp;<br> Wiring (C++)</h2>
+    </section>
+
+    <section style="background:url(img/johnny-5-is-your-friend.jpg) no-repeat; background-size:cover">
+        <h1><span class="js">johnny-five</span> is your friend</h1>
+        <p>Program hardware with plain ol'JS and your favourite editor</p>
+    </section>
+
+    <section>
+        <h1 style="margin:0">Firmata is a comms protocol 
+            &amp; <br>Arduino program</h1>
+        <p>Expose Arduino functionality over the serialport</p>
+    </section>  
+
+    <section style="text-align:center">
+        <img src="img/firmata.jpg">
+    </section>  
+
+    <section style="background:url(img/johnny-5-is-rage.jpg) no-repeat; background-size:cover">
+        <p style="margin-top:210px; background:rgba(0,0,0,0.6); text-align:center">Ardunio ⇄ Firmata ⇄ serialport ⇄ johnny-five</p>
+    </section>  
+
+    <section style="text-align:center">
+        <h1>IMPORTANT <br>SAFETY WARNING</h1>
+    </section>  
+
+     <section style="text-align:center; background:url(img/johnny-5-is-hard.jpg) no-repeat; background-size:cover">
+        <h1 style="margin-top:300px;background:rgba(0,0,0,0.4)">HARDWARE IS HARD</h1>
+    </section>
+
+    <section style="text-align:center">
+        <iframe style="margin:-120px auto" src="http://instagram.com/p/cgrjoppxlp/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+    </section>      
+
+    <section style="text-align:center; background:url(img/johnny-5-is-cowboy.jpg) no-repeat; background-size:cover">
+        <h2 style="margin-top:300px;background:rgba(0,0,0,0.4)">Usual approach is useless here</h2>
+        <p>Good luck with your test coverage</p>
+    </section>
+
+    <section>
+        <h1>Reality has a terrible API</h1>
+        <ul>
+            <li>The Generous Motor</li>
+            <li>The Enfeebled Servo</li>
+            <li>Fudge's Constant</li>
+        </ul>
+    </section>
+
+    <section style="background:url(img/johnny-5-is-hold-you.jpg) no-repeat; background-size:cover">
+        <h2>firmata requires constant <br>usb connection to host<h2>    
+    </section>  
+
+    <section style="background:url(img/johnny-5-goes-camping.jpg) no-repeat; background-size:cover">
+        <div class="hi-viz">
+            <h1>Future Tech?</h1>
+            <ul>
+                <li><a href="http://technical.io">technical.io</a> - Tessel - JS on hardware</li>
+                <li><a herf="http://www.kickstarter.com/projects/48651611/espruino-javascript-for-things">Espruino</a> - Javascript for things</li>
+            </ul>
+        </div>
+    </section>
+
+    <section style="background:url(img/johnny-5-is-@fat.jpg) no-repeat; background-size:cover">
+        <h1>@fat?</h1>
+    </section>
+
+    <section>
+        <h1>(╯°□°）╯︵ ┻━┻</h1>
+    </section>
+
+    <section style="background:black">
+        <h1 style="text-align:center"><a href="javascript:fin()">Fin()?</a></h1>
+    </section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section style="background-image:url(img/jolly-roger.gif);background-size:cover">
+        <img style="position:fixed; bottom:10px" src="img/explosion.gif" />
+        <img style="position:fixed; bottom:10px; right:60px" src="img/explosion.gif" />
+    </section>
+
+    <script>
+        stack();
+    </script>
+</body>
