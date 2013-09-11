@@ -1,6 +1,5 @@
 body {
-   /*font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; */
-   font-family: futura;
+   font-family: futura, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; */
    font-weight: 300;
    letter-spacing: 1px;
    overflow-x:hidden; /* FF shows scroll horizontal scrollbars */
